@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import HomeClient from './home-client'
+import { OrganizationSchema, HowToSchema, BreadcrumbList } from '@/components/seo/structured-data'
 
 export const metadata: Metadata = {
   title: "Generar QR Online Gratis - Creador de Códigos QR Gratuito",
@@ -9,6 +10,21 @@ export const metadata: Metadata = {
     title: "Generar QR Online Gratis - QR Libre",
     description: "Genera códigos QR online gratis sin registro. Creador de códigos QR gratuito e ilimitado.",
     type: "website",
+    url: "/",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "QR Libre - Generador de Códigos QR Gratuito",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Generar QR Online Gratis - QR Libre",
+    description: "Genera códigos QR online gratis sin registro. Creador de códigos QR gratuito e ilimitado.",
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "/",
@@ -82,6 +98,8 @@ export default function Home() {
     ],
   }
 
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+
   return (
     <>
       <script
@@ -91,6 +109,13 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <OrganizationSchema />
+      <HowToSchema />
+      <BreadcrumbList
+        items={[
+          { name: 'Inicio', url: baseUrl },
+        ]}
       />
       <HomeClient />
     </>

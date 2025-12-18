@@ -181,13 +181,17 @@ export default function QrCodesClient() {
                       {/* QR Code Image */}
                       {selectedQr?.id === qr.id && selectedQr.qrCodeImage && (
                         <div className="space-y-2">
-                          <div className="flex justify-center p-4 bg-white rounded-lg">
-                            <img
-                              src={selectedQr.qrCodeImage}
-                              alt={`QR Code para ${selectedQr.url}`}
-                              className="w-48 h-48"
-                            />
-                          </div>
+                        <div className="flex justify-center p-4 bg-white rounded-lg">
+                          <img
+                            src={selectedQr.qrCodeImage}
+                            alt={`QR Code para ${selectedQr.url} - Generado con QR Libre`}
+                            className="w-48 h-48"
+                            loading="lazy"
+                            decoding="async"
+                            width={192}
+                            height={192}
+                          />
+                        </div>
                           <Button
                             variant="outline"
                             size="sm"

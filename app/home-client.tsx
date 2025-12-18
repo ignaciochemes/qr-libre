@@ -164,8 +164,12 @@ export default function HomeClient() {
                   <div className="p-4 bg-white rounded-lg shadow-sm">
                     <img
                       src={qrCode.qrCodeImage}
-                      alt={`QR Code para ${qrCode.url}`}
+                      alt={`QR Code para ${qrCode.url} - Generado con QR Libre, el mejor generador de códigos QR online gratis`}
                       className="w-64 h-64"
+                      loading="lazy"
+                      decoding="async"
+                      width={256}
+                      height={256}
                     />
                   </div>
                 </div>
@@ -190,43 +194,76 @@ export default function HomeClient() {
           </div>
 
           {/* SEO Content Section */}
-          <section className="mt-16 space-y-6">
+          <section className="mt-16 space-y-6" aria-label="Información sobre QR Libre">
             <Card>
               <CardHeader>
-                <CardTitle className="text-2xl">Generador de Códigos QR Online Gratis</CardTitle>
+                <h2 className="text-2xl font-bold">Generador de Códigos QR Online Gratis</h2>
               </CardHeader>
               <CardContent className="space-y-4 text-muted-foreground">
                 <p>
-                  <strong>QR Libre</strong> es el mejor generador de códigos QR online gratis. 
+                  <strong>QR Libre</strong> es el mejor <strong>generador de códigos QR online gratis</strong> disponible. 
                   Crea códigos QR ilimitados sin necesidad de registro ni pago. Nuestra herramienta 
-                  te permite generar códigos QR para URLs de forma instantánea y descargarlos en 
-                  formato PNG de alta calidad. Todos tus códigos QR se guardan localmente en tu navegador.
+                  te permite <strong>generar códigos QR para URLs</strong> de forma instantánea y descargarlos en 
+                  formato PNG de alta calidad. Todos tus códigos QR se guardan localmente en tu navegador, 
+                  garantizando tu privacidad total.
                 </p>
                 <p>
                   ¿Buscas un <strong>generador QR online gratis</strong>? Has llegado al lugar correcto. 
                   QR Libre es completamente gratuito, no requiere registro y te permite crear tantos 
-                  códigos QR como necesites. Perfecto para uso personal y profesional.
+                  códigos QR como necesites. Perfecto para uso personal y profesional. Nuestro 
+                  <strong>creador de QR codes</strong> es la solución ideal para generar códigos QR 
+                  de forma rápida y sencilla.
                 </p>
-                <h2 className="text-xl font-semibold text-foreground mt-6 mb-2">
+                
+                <h3 className="text-xl font-semibold text-foreground mt-6 mb-2">
                   ¿Por qué elegir QR Libre para generar QR codes?
-                </h2>
+                </h3>
                 <ul className="list-disc list-inside space-y-2">
-                  <li><strong>100% Gratis:</strong> Genera códigos QR ilimitados sin costo</li>
-                  <li><strong>Sin Registro:</strong> Crea QR codes de forma inmediata sin crear cuenta</li>
-                  <li><strong>Privacidad Total:</strong> Tus QR codes se guardan solo en tu navegador</li>
-                  <li><strong>Descarga Gratis:</strong> Descarga tus códigos QR en PNG de alta calidad</li>
-                  <li><strong>Almacenamiento Local:</strong> Guarda y gestiona todos tus códigos QR en tu navegador</li>
-                  <li><strong>Fácil de Usar:</strong> Interfaz simple e intuitiva</li>
+                  <li><strong>100% Gratis:</strong> Genera códigos QR ilimitados sin costo. No hay límites ni restricciones.</li>
+                  <li><strong>Sin Registro:</strong> Crea QR codes de forma inmediata sin crear cuenta. Empieza a generar ahora mismo.</li>
+                  <li><strong>Privacidad Total:</strong> Tus QR codes se guardan solo en tu navegador. Tus datos nunca salen de tu dispositivo.</li>
+                  <li><strong>Descarga Gratis:</strong> Descarga tus códigos QR en PNG de alta calidad para usar donde necesites.</li>
+                  <li><strong>Almacenamiento Local:</strong> Guarda y gestiona todos tus códigos QR en tu navegador de forma permanente.</li>
+                  <li><strong>Fácil de Usar:</strong> Interfaz simple e intuitiva. Genera tu primer QR code en menos de 30 segundos.</li>
+                  <li><strong>Sin Límites:</strong> Genera tantos códigos QR como necesites, completamente gratis e ilimitado.</li>
                 </ul>
-                <h2 className="text-xl font-semibold text-foreground mt-6 mb-2">
+                
+                <h3 className="text-xl font-semibold text-foreground mt-6 mb-2">
                   Cómo generar un código QR online gratis
-                </h2>
+                </h3>
                 <ol className="list-decimal list-inside space-y-2">
-                  <li>Ingresa la URL que deseas convertir en código QR</li>
-                  <li>Haz clic en "Generar QR Code Gratis"</li>
-                  <li>Descarga tu código QR en formato PNG</li>
-                  <li>¡Listo! Tu código QR está listo para usar y guardado en tu navegador</li>
+                  <li>Ingresa la URL que deseas convertir en código QR en el campo de texto superior</li>
+                  <li>Haz clic en "Generar QR Code Gratis" y espera unos segundos</li>
+                  <li>Visualiza tu código QR generado instantáneamente</li>
+                  <li>Descarga tu código QR en formato PNG haciendo clic en el botón de descarga</li>
+                  <li>¡Listo! Tu código QR está listo para usar y guardado automáticamente en tu navegador</li>
                 </ol>
+
+                <h3 className="text-xl font-semibold text-foreground mt-6 mb-2">
+                  Usos comunes de los códigos QR
+                </h3>
+                <p>
+                  Los códigos QR generados con QR Libre pueden ser utilizados para múltiples propósitos:
+                </p>
+                <ul className="list-disc list-inside space-y-2">
+                  <li><strong>Marketing Digital:</strong> Comparte enlaces a tus productos, servicios o promociones</li>
+                  <li><strong>Redes Sociales:</strong> Enlaza a tus perfiles de Instagram, Facebook, Twitter y más</li>
+                  <li><strong>Menús Digitales:</strong> Crea códigos QR para restaurantes y cafeterías</li>
+                  <li><strong>Eventos:</strong> Comparte información de eventos, conferencias y reuniones</li>
+                  <li><strong>Portafolios:</strong> Enlaza a tu sitio web personal o portafolio profesional</li>
+                  <li><strong>WiFi:</strong> Comparte credenciales de WiFi de forma rápida y segura</li>
+                  <li><strong>Contacto:</strong> Comparte tu tarjeta de contacto digital o información de contacto</li>
+                </ul>
+
+                <h3 className="text-xl font-semibold text-foreground mt-6 mb-2">
+                  ¿Es seguro usar QR Libre?
+                </h3>
+                <p>
+                  Absolutamente. QR Libre es una herramienta 100% segura y privada. Todos los códigos QR 
+                  se generan directamente en tu navegador y se almacenan localmente. No enviamos tus datos 
+                  a ningún servidor externo, garantizando tu privacidad y seguridad total. Además, nuestro 
+                  servicio es completamente gratuito y sin publicidad intrusiva.
+                </p>
               </CardContent>
             </Card>
           </section>

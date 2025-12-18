@@ -1,0 +1,8 @@
+# Este directorio contiene archivos estáticos
+# Archivos necesarios:
+# - og-image.png (1200x630px) - Imagen Open Graph
+# - favicon.ico - Favicon del sitio
+# - icon-192.png (192x192px) - Icono PWA pequeño
+# - icon-512.png (512x512px) - Icono PWA grande
+# - apple-touch-icon.png (180x180px) - Icono para iOS
+
