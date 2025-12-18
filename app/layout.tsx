@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -98,10 +99,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // Agregar aquí los códigos de verificación cuando los tengas
-    // google: 'tu-codigo-google',
-    // yandex: 'tu-codigo-yandex',
-    // bing: 'tu-codigo-bing',
+    google: process.env.NEXT_PUBLIC_VERIFICATION_GOOGLE,
   },
   alternates: {
     canonical: "/",
@@ -118,8 +116,12 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <GoogleAnalytics />
+        {children}
+      </body>
     </html>
   );
 }
